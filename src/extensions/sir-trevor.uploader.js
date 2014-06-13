@@ -3,7 +3,8 @@
 *   Generic Upload implementation that can be extended for blocks
 */
 
-SirTrevor.fileUploader = function(block, file, success, error) {
+SirTrevor.fileUploader = function(block, file, success, error, uploadUrl) {
+  uploadUrl = uploadUrl || SirTrevor.DEFAULTS.uploadUrl;
 
   var uid  = [block.blockID, (new Date()).getTime(), 'raw'].join('-');
   var data = new FormData();
@@ -31,7 +32,7 @@ SirTrevor.fileUploader = function(block, file, success, error) {
   };
 
   var xhr = $.ajax({
-    url: SirTrevor.DEFAULTS.uploadUrl,
+    url: uploadUrl,
     data: data,
     cache: false,
     contentType: false,

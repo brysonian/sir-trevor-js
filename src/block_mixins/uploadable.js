@@ -13,7 +13,8 @@ SirTrevor.BlockMixins.Uploadable = {
   },
 
   uploader: function(file, success, failure){
-    return SirTrevor.fileUploader(this, file, success, failure);
+    var parent = SirTrevor.getInstance(this.instanceID);
+    return SirTrevor.fileUploader(this, file, success, failure, parent.options.uploadUrl);
   }
 
 };

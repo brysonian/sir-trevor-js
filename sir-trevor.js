@@ -4,7 +4,7 @@
  * Released under the MIT license
  * www.opensource.org/licenses/MIT
  *
- * 2014-05-01
+ * 2014-06-13
  */
 
 (function ($, _){
@@ -500,7 +500,8 @@
   *   Generic Upload implementation that can be extended for blocks
   */
   
-  SirTrevor.fileUploader = function(block, file, success, error) {
+  SirTrevor.fileUploader = function(block, file, success, error, uploadUrl) {
+    uploadUrl = uploadUrl || SirTrevor.DEFAULTS.uploadUrl;
   
     var uid  = [block.blockID, (new Date()).getTime(), 'raw'].join('-');
     var data = new FormData();
@@ -528,7 +529,7 @@
     };
   
     var xhr = $.ajax({
-      url: SirTrevor.DEFAULTS.uploadUrl,
+      url: uploadUrl,
       data: data,
       cache: false,
       contentType: false,
@@ -967,7 +968,8 @@
     },
   
     uploader: function(file, success, failure){
-      return SirTrevor.fileUploader(this, file, success, failure);
+      var parent = SirTrevor.getInstance(this.instanceID);
+      return SirTrevor.fileUploader(this, file, success, failure, parent.options.uploadUrl);
     }
   
   };
