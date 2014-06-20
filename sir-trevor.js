@@ -4,7 +4,7 @@
  * Released under the MIT license
  * www.opensource.org/licenses/MIT
  *
- * 2014-06-13
+ * 2014-06-19
  */
 
 (function ($, _){
@@ -2945,7 +2945,9 @@
           if (_.isUndefined(_block)) { return false; }
   
           // Find our block
-          this.performValidations(_block, should_validate);
+          if (this.required !== false) {
+            this.performValidations(_block, should_validate);
+          }
           this.saveBlockStateToStore(_block);
         };
   
