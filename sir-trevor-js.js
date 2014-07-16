@@ -4,16 +4,16 @@
  * Released under the MIT license
  * www.opensource.org/licenses/MIT
  *
- * 2014-06-25
+ * 2014-07-15
  */
 
 (function (root, factory) {
   if (typeof exports === 'object') {
     // CommonJS
-    module.exports = factory(require('jquery'), require('underscore'), require('eventable'));
+    module.exports = factory(require('jquery'), require('underscore'), require('Eventable'));
   } else if (typeof define === 'function' && define.amd) {
     // AMD
-    define('sirtrevor', ['jquery', 'underscore', 'eventable'], function($, _, Eventable) {
+    define('sirtrevor', ['jquery', 'underscore', 'Eventable'], function($, _, Eventable) {
       return (root.returnExportsGlobal = factory($, _, Eventable));
     });
   } else {

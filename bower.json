@@ -1,5 +1,6 @@
 {
   "name": "sir-trevor-js",
+  "main": "sir-trevor.js",
   "version": "0.3.2",
   "ignore": [
     "**/.*",
