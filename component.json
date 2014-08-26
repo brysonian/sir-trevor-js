@@ -1,9 +1,9 @@
 {
-  "name": "sir-trevor-js",
+  "name": "sir-trevor.js",
   "version": "0.3.2",
   "description": "",
   "keywords": [],
-  "repo": "https://github.com/madebymany/sir-trevor-js",
+  "repo": "https://github.com/brysonian/sir-trevor.js",
   "local": [],
   "main": "sir-trevor.js",
   "scripts": [

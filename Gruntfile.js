@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 
     'jasmine' : {
       'sir-trevor': {
-        src : 'sir-trevor-js.js',
+        src : 'sir-trevor.js',
         options: {
           vendor: ['bower_components/jquery/jquery.js',
                    'bower_components/underscore/underscore.js',
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
           banner: banner
         },
         files: {
-          'sir-trevor-js.js': ['src/sir-trevor-js.js']
+          'sir-trevor.js': ['src/sir-trevor.js']
         }
       }
     },
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
       },
       standard: {
         files: {
-          'sir-trevor-js.min.js': ['sir-trevor-js.js']
+          'sir-trevor.min.js': ['sir-trevor.js']
         }
       }
     },
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      all: ['sir-trevor-js.js'],
+      all: ['sir-trevor.js'],
 
       options: {
         curly: true,
@@ -90,7 +90,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'sir-trevor-js.css': 'src/sass/main.scss'
+          'sir-trevor.css': 'src/sass/main.scss'
         }
       }
     }
