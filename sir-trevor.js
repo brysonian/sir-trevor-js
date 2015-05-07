@@ -10,10 +10,10 @@
 (function (root, factory) {
   if (typeof exports === 'object') {
     // CommonJS
-    module.exports = factory(require('jquery'), require('underscore'), require('Eventable'));
+    module.exports = factory(require('jquery'), require('underscore'), require('eventablejs'));
   } else if (typeof define === 'function' && define.amd) {
     // AMD
-    define('sirtrevor', ['jquery', 'underscore', 'Eventable'], function($, _, Eventable) {
+    define('sirtrevor', ['jquery', 'underscore', 'eventablejs'], function($, _, Eventable) {
       return (root.returnExportsGlobal = factory($, _, Eventable));
     });
   } else {
