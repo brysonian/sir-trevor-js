@@ -1,5 +1,6 @@
 {
   "name": "sir-trevor",
+  "main": "sir-trevor.js",
   "version": "0.3.2",
   "repository": {
     "type": "git",
@@ -12,7 +13,8 @@
     "grunt": "0.4.1",
     "grunt-cli": "0.1.6",
     "grunt-rigger": "0.4.0",
-    "grunt-contrib-jasmine": "0.4.2"
+    "grunt-contrib-jasmine": "0.4.2",
+    "eventablejs": "*"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.2.0",
