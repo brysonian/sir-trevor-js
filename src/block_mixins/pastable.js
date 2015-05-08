@@ -6,7 +6,7 @@ SirTrevor.BlockMixins.Pastable = {
     SirTrevor.log("Adding pastable to block " + this.blockID);
 
     this.paste_options = _.extend({}, SirTrevor.DEFAULTS.Block.paste_options, this.paste_options);
-    this.$inputs.append(_.template(this.paste_options.html, this));
+    this.$inputs.append(_.template(this.paste_options.html)(this));
 
     this.$('.st-paste-block')
       .bind('click', function(){ $(this).select(); })

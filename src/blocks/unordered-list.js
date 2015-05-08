@@ -15,7 +15,8 @@ SirTrevor.Blocks.List = (function() {
     icon_name: 'list',
 
     editorHTML: function() {
-      return _.template(template, this);
+      return _.template(template)(this);
+      // return _.template(template, this);
     },
 
     loadData: function(data){
